@@ -41,13 +41,24 @@
           <input type="button" name="next" class="next action-button" value="Next" />
         </fieldset>
         <fieldset>
-          <h2 class="fs-title">Sector</h2>
-          <input type="text" name="sector" ng-model="regData.sector"  placeholder="Sector"/>
+          <h2 class="fs-title">Zona</h2>
+          <input type="number" min="0" max="9" name="zdig1" ng-model="regData.zona.zdig1"  placeholder="0"/>
+          <input type="number" min="0" max="9" name="zdig2" ng-model="regData.zona.zdig2"  placeholder="0"/>
+          <input type="number" min="0" max="9" name="zdig3" ng-model="regData.zona.zdig3"  placeholder="0"/>
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
           <input type="button" name="next" class="next action-button" value="Next" />
         </fieldset>
         <fieldset>
-          <h2 class="fs-title">Zona</h2>
-          <input type="text" name="zona" ng-model="regData.zona" placeholder="Zona"/>
+          <h2 class="fs-title">Sector</h2>
+          <input type="number" min="0" max="9" name="sdig1" ng-model="regData.sector.sdig1"  placeholder="0"/>
+          <input type="number" min="0" max="9" name="sdig2" ng-model="regData.sector.sdig2"  placeholder="0"/>
+          <input type="number" min="0" max="9" name="sdig3" ng-model="regData.sector.sdig3"  placeholder="0"/>
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <fieldset>
+          <h2 class="fs-title">Final</h2>
+          <input type="text" name="final" ng-model="regData.final" placeholder="Final"/>
           <input type="submit" name="submit" class="submit action-button" value="Submit" />
         </fieldset>
       </form>

@@ -6,9 +6,19 @@ module.exports = function(router){
 	router.post('/polls', function(req,res){
 		var poll = new Poll();
 		poll.parroquia = req.body.parroquia;
-		poll.zona = req.body.zona;
-		poll.sector = req.body.sector;
+		sdig1 = req.body.sector.sdig1;
+		sdig2 = req.body.sector.sdig2;
+		sdig3 = req.body.sector.sdig3;
 
+		zdig1 = req.body.zona.zdig1;
+		zdig2 = req.body.zona.zdig2;
+		zdig3 = req.body.zona.zdig3;
+		
+		poll.sector.push({dig1: sdig1, dig2: sdig2, dig3: sdig3});
+		poll.zona.push({dig1: zdig1, dig2: zdig2, dig3: zdig3});
+		poll.final = req.body.final;
+
+		console.log(poll);
 		if(req.body.parroquia == null || req.body.zona == null || req.body.sector == null){
 			res.send('Asegurate de proveer los datos');
 		} else {
