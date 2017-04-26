@@ -13,13 +13,20 @@ module.exports = function(router){
 		zdig1 = req.body.zona.zdig1;
 		zdig2 = req.body.zona.zdig2;
 		zdig3 = req.body.zona.zdig3;
+
+		dir1 = req.body.direccion.dir1;
+		dir2 = req.body.direccion.dir2;
 		
 		poll.sector.push({dig1: sdig1, dig2: sdig2, dig3: sdig3});
 		poll.zona.push({dig1: zdig1, dig2: zdig2, dig3: zdig3});
+		poll.direccion.push({dir1: dir1, dir2: dir2})
+
+
+		poll.comunidad = req.body.comunidad;
 		poll.final = req.body.final;
 
 		console.log(poll);
-		if(req.body.parroquia == null || req.body.zona == null || req.body.sector == null){
+		if(req.body.parroquia == null || req.body.zona == null || req.body.sector == null || req.body.comunidad == null){
 			res.send('Asegurate de proveer los datos');
 		} else {
 			poll.save(function(err){
