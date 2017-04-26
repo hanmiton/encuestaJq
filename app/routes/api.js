@@ -7,8 +7,9 @@ module.exports = function(router){
 		var poll = new Poll();
 		poll.parroquia = req.body.parroquia;
 		poll.zona = req.body.zona;
+		poll.sector = req.body.sector;
 
-		if(req.body.parroquia == null || req.body.zona == null){
+		if(req.body.parroquia == null || req.body.zona == null || req.body.sector == null){
 			res.send('Asegurate de proveer los datos');
 		} else {
 			poll.save(function(err){
