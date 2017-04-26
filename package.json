@@ -1,0 +1,23 @@
+{
+  "name": "multi-step-form",
+  "version": "0.0.1",
+  "description": "Simple HTML5 multiple step form with validation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "javascript",
+    "validation",
+    "steps"
+  ],
+  "author": "Michael Szul <michael@szul.us>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.9.6",
+    "morgan": "^1.8.1"
+  }
+}

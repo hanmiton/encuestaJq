@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+    
+        <title>Encuesta</title>
+        
+        <style>
+            main {
+                max-width: 800px;
+                margin: 50px auto;
+            }
+            .error {
+                border-color: #990000 !important;
+            }
+        </style>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+    
+    <body ng-app="pollApp">
+        <form id="msform">
+        <!-- progressbar -->
+        <ul id="progressbar">
+          <li class="active">Parroquia</li>
+          <li>Zona</li>
+          <li>Sector</li>
+        </ul>
+        <!-- fieldsets -->
+        <fieldset>
+          <h2 class="fs-title">Parroquia</h2>
+          <input type="text" name="parroquia" placeholder="Parroquia"/>
+          <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <fieldset>
+          <h2 class="fs-title">Zona</h2>
+          <input type="text" name="zona" placeholder="Zona" />
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <fieldset>
+          <h2 class="fs-title">Sector</h2>
+          <input type="text" name="sector" placeholder="Sector" />
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <fieldset>
+          <h2 class="fs-title">Final</h2>
+          <input type="text" name="final" placeholder="Final" />
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="submit" name="submit" class="submit action-button" value="Submit" />
+        </fieldset>
+
+      </form>
+
+      <div ng-view></div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="assets/js/app.js"></script>
+          <script src="assets/js/jquerya.js"></script>
+          <script src="assets/js/jqueryc.js"></script>
+    </body>
+</html>
