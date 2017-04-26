@@ -6,7 +6,9 @@ module.exports = function(router){
 	router.post('/polls', function(req,res){
 		var poll = new Poll();
 		poll.parroquia = req.body.parroquia;
-		if(req.body.parroquia == null){
+		poll.zona = req.body.zona;
+
+		if(req.body.parroquia == null || req.body.zona == null){
 			res.send('Asegurate de proveer los datos');
 		} else {
 			poll.save(function(err){

@@ -28,41 +28,25 @@
     <script src="app/routes.js"></script>
     
     <body ng-app="pollApp">
-        <form id="msform">
-        <!-- progressbar -->
+    <div>
+        <form id="msform" ng-submit="submit(regData)" ng-controller="regCtrl">
         <ul id="progressbar">
           <li class="active">Parroquia</li>
           <li>Zona</li>
           <li>Sector</li>
         </ul>
-        <!-- fieldsets -->
         <fieldset>
           <h2 class="fs-title">Parroquia</h2>
-          <input type="text" name="parroquia" placeholder="Parroquia"/>
+          <input type="text" name="parroquia" ng-model="regData.parroquia"  placeholder="Parroquia"/>
           <input type="button" name="next" class="next action-button" value="Next" />
         </fieldset>
         <fieldset>
           <h2 class="fs-title">Zona</h2>
-          <input type="text" name="zona" placeholder="Zona" />
-          <input type="button" name="previous" class="previous action-button" value="Previous" />
-          <input type="button" name="next" class="next action-button" value="Next" />
-        </fieldset>
-        <fieldset>
-          <h2 class="fs-title">Sector</h2>
-          <input type="text" name="sector" placeholder="Sector" />
-          <input type="button" name="previous" class="previous action-button" value="Previous" />
-          <input type="button" name="next" class="next action-button" value="Next" />
-        </fieldset>
-        <fieldset>
-          <h2 class="fs-title">Final</h2>
-          <input type="text" name="final" placeholder="Final" />
-          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="text" name="zona" ng-model="regData.zona" placeholder="Zona"/>
           <input type="submit" name="submit" class="submit action-button" value="Submit" />
         </fieldset>
-
       </form>
-
-      <div ng-view></div>
+    </div>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script src="assets/js/app.js"></script>
           <script src="assets/js/jquerya.js"></script>

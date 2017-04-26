@@ -1,5 +1,10 @@
 angular.module('pollApp',['appRoutes'])
 
-.config(function(){
-	console.log('test poll aplication');
-});
+.controller('regCtrl', ['$scope', '$http', function($scope, $http) {
+  $scope.submit = function(regData) {
+  
+        console.log(this.regData);
+        $http.post('/api/polls', this.regData);
+      };
+}]);
+

@@ -4,7 +4,7 @@ angular.module('appRoutes', ['ngRoute'])
 
 	$routeProvider
 
-	.when('/',{
+	.when('/home',{
 		templateUrl: 'app/views/pages/poll.html'
 	})
 
