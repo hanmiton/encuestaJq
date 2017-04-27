@@ -18,7 +18,7 @@ body {
 }
 /*form styles*/
 #msform {
-	width: 400px;
+	width: 100%;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -41,7 +41,7 @@ body {
 	display: none;
 }
 /*inputs*/
-#msform input, #msform textarea {
+#msform input, #msform textarea, #msform select, #msform option {
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -51,6 +51,11 @@ body {
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
+}
+
+#msform select, #msform option{
+	padding: 3px;
+	margin-bottom: 3px;
 }
 /*buttons*/
 #msform .action-button {

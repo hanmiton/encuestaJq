@@ -36,6 +36,11 @@
           <li>Sector</li>
         </ul>
         <fieldset>
+            <label>Elecciones</label>
+            <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+          
+        <fieldset>
           <h2 class="fs-title">Parroquia</h2>
           <input type="text" name="parroquia" ng-model="regData.parroquia"  placeholder="Parroquia"/>
           <input type="button" name="next" class="next action-button" value="Next" />
@@ -70,8 +75,75 @@
           <input type="button" name="next" class="next action-button" value="Next" />
         </fieldset>
         <fieldset>
+        <h2 class="fs-title">Personas</h2>
+          <input type="number" min="1" max="11"  ng-model="regData.persona.numper"  placeholder="Edad"/>
+          <!--guia tabla insercion-->
+          <table>
+           <tr ng-repeat="persona in poll.personas">
+              <td>
+                  <select 
+                ng-options="opcion.name for opcion in parentescos.opciones track by opcion.id"
+                ng-model="persona.parentesco">
+                  <option value=""> --Parentesco-- </option>
+                  </select>
+              </td>
+              <td>
+                <select 
+                  ng-options="opcion.name for opcion in sexos.opciones track by opcion.id"
+                  ng-model="persona.sexo">
+                <option value=""> --Sexo-- </option>
+                </select>
+              </td>
+              <td>
+                <select 
+            ng-options="opcion.name for opcion in etnias.opciones track by opcion.id"
+            ng-model="persona.etnia">
+            <option value=""> --Etnia-- </option>
+          </select>
+              </td>
+              <td>
+                <input type="number" min="0" max="150"  ng-model="persona.edad"  placeholder="Edad"/>
+              </td>
+              <td>
+                <select 
+            ng-options="opcion.name for opcion in nacionalidades.opciones track by opcion.id"
+            ng-model="persona.nacionalidad">
+            <option value=""> --Pueblo-- </option>
+          </select>
+              </td>
+              <td>
+                <select 
+            ng-options="opcion.name for opcion in idiomas.opciones track by opcion.id"
+            ng-model="persona.idioma">
+            <option value=""> --Idioma-- </option>
+          </select>
+              </td>
+              <td>
+                <select 
+            ng-options="opcion.name for opcion in nacimientos.opciones track by opcion.id"
+            ng-model="persona.nacimiento">
+            <option value=""> --Lugar nacimiento-- </option>
+          </select>
+              </td>
+              <td>
+                <select 
+            ng-options="opcion.name for opcion in niveles.opciones track by opcion.id"
+            ng-model="persona.nivel">
+            <option value=""> --Nivel Académico-- </option>
+          </select>
+              </td>
+           </tr>
+          
+        </table>
+
+           <input type="button" name="previous" class="action-button" value="Añadir" ng-click="addChoice()"/>
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <fieldset>
           <h2 class="fs-title">Final</h2>
           <input type="text" name="final" ng-model="regData.final" placeholder="Final"/>
+           <input type="button" name="previous" class="previous action-button" value="Previous" />
           <input type="submit" name="submit" class="submit action-button" value="Submit" />
         </fieldset>
       </form>
